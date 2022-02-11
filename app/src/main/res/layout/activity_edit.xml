@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditActivity"
+    android:background="#193347"
     android:padding="20dp"
     >
 
@@ -12,33 +13,72 @@
         android:id="@+id/edit_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily ="@font/roboto_mono"
         android:hint="Judul"
-        app:layout_constraintStart_toStartOf="parent"
+        android:isScrollContainer="false"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/txTanggal"
+        android:layout_width="207dp"
+        android:layout_height="54dp"
+        android:focusable="false"
+        android:fontFamily="@font/roboto_mono"
+        android:hint="Tanggal"
+        android:textColor="@color/white"
+        android:textColorHighlight="#608F30"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/edit_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_title"
+        app:layout_constraintVertical_bias="0.288"
         />
+
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txTanggal"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_mono"/>
+
     <EditText
         android:id="@+id/edit_note"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Tulis Catatan"
-        android:minLines="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_title"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/roboto_mono"
         android:gravity="top"
-        />
+        android:hint="Deskripsi"
+        android:minLines="3"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_title" />
+
     <Button
         android:id="@+id/button_save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
         android:text="SAVE"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_note"
-        android:layout_marginTop="20dp"
-        />
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_note" />
+
     <Button
         android:id="@+id/button_update"
         android:layout_width="0dp"

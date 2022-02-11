@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupView (){
         supportActionBar!!.apply {
-            title = "Catatan"
+            title = "PENGINGAT!"
         }
     }
 
